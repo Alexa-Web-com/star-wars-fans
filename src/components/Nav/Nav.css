@@ -1,13 +1,18 @@
-.nav__cntr {
+.nav {
     position: fixed;
-    width: 100%;
-    background-image: linear-gradient(to right, black, black, rgb(31, 106, 245), black);
     top: 0;
+    left: 0;
+    right: 0;
     z-index: 10;
+    height: 4rem;
+}
+
+.nav__cntr {
+    background-image: linear-gradient(to right, black, black, rgb(31, 106, 245), black);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 4rem;
+    height: 100%;
 }
 
 /* LOGO & TYTUŁ */
@@ -59,7 +64,6 @@
     display: flex;
     flex-direction: column;
     color: white;
-    align-self: flex-start;
 }
 
 .nav__language_el {
@@ -76,7 +80,8 @@
 }
 
 /* UKRYTY HAMBURGER */
-.hamburger {
+.hamburger,
+.hamburger_active {
     display: none;
     cursor: pointer;
 }
@@ -90,7 +95,6 @@
     transition: all 0.3s ease-in-out;
     background-color: white;
 }
-
 
 
 @media screen and (max-width: 815px) {
@@ -111,6 +115,11 @@
     /* NAGŁOWEK Z LOGO I TUTUŁEM, GDY HAM IS ACTIVE */
     .nav__cntr_hamburger {
         background-image: linear-gradient(to right, black, black, rgb(31, 106, 245), black, black);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
     }
 
     /* POJAWIENIE SIE TYTUŁU */
@@ -118,15 +127,10 @@
         display: block;
     }
 
-    /*POJAWIENIE SIE HAM */
-    .hamburger {
-        display: block;
-    }
-
-    /* WPROWADZENIE KLASY, BY USTAWIC DZIECI DLA HAM ACTIVE */
+    /*POJAWIENIE SIE HAM i HAM ACTIVE (dod. klasa dla ustawienia dzieci)*/
+    .hamburger,
     .hamburger_active {
         display: block;
-        cursor: pointer;
     }
 
     /* USTAWIENIE DZIECI W HAM ACTIVE */
@@ -146,7 +150,7 @@
     .nav__navbar_el_cntr_hamburger_active {
         position: fixed;
         right: 0;
-        width: 100%;
+        left: 0;
         top: 4rem;
         background-image: linear-gradient(to right, black, black, rgb(31, 106, 245), black, black);
         z-index: 5;
