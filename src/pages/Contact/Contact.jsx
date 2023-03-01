@@ -98,7 +98,7 @@ const Contact = (props) => {
                             </p>
                             <p className='contact__details_el'>
                                 <span>email: </span>
-                                <a href='mailto:aleksandra.wilczynska.plgdy@gmail.com?subject=Fan Message' target='_blank' rel='noreferrer'>aleksandra.wilczynska.plgdy@gmail.com</a>
+                                <a href='mailto:info@alexa-web.com?subject=Fan Message' target='_blank' rel='noreferrer'>info@alexa-web.com</a>
                             </p>
                             <p className='contact__details_el'>
                                 <span>tel: </span>
