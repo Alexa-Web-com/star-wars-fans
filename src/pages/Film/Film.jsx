@@ -103,7 +103,8 @@ const Film = (props) => {
                 ?
                 <Spinner />
                 :
-                <div className='film__cntr'>
+                <div className='film__cntr'
+                    onClick={() => props.setIsHamburgerActive(false)}>
 
                     <figure className='person__background_figure'>
                         <img src={film__backgroud_img} alt='star wars wallpaper' className='person__background_img' />

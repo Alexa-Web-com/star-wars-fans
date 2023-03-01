@@ -27,15 +27,14 @@ const Contact = (props) => {
         setUserName('')
         setUserEmail('')
         setUserMessage('')
-
     }
-
 
     return (
         <>
             {sentMessage
                 ?
-                <div className='contact__cntr'>
+                <div className='contact__cntr'
+                    onClick={() => props.setIsHamburgerActive(false)}>
 
                     <figure className='contact__background_figure'>
                         <img src={contact__backgroud_img} alt='star wars wallpaper' className='contact__background_img' />

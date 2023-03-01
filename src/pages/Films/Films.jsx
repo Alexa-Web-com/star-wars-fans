@@ -30,7 +30,8 @@ const Films = (props) => {
                 ?
                 <Spinner />
                 :
-                <div className='films__cntr'>
+                <div className='films__cntr'
+                    onClick={() => props.setIsHamburgerActive(false)}>
                     <div className='films__content_cntr'>
                         <input className='app__search_input'
                             type="text"

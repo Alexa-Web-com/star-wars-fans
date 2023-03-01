@@ -6,19 +6,22 @@ import logo from '../../assets/Star_Wars_Logo.svg'
 
 const Nav = (props) => {
 
-    const [isHamburgerActive, setIsHamburgerActive] = useState(false)
+    // const [isHamburgerActive, setIsHamburgerActive] = useState(false)
 
-    useEffect(() => {
-        window.addEventListener('resize', (e) => {
-            console.log(e.target.innerWidth);
-            e.target.innerWidth > 768 && setIsHamburgerActive(false)
-        })
+    // useEffect(() => {
+    //     window.addEventListener('resize', (e) => {
+    //         e.target.innerWidth > 768 && setIsHamburgerActive(false)
+    //     })
 
-        return () => window.removeEventListener('resize', (e) => {
-            e.target.innerWidth > 768 && setIsHamburgerActive(false)
-        })
+    //     return () => window.removeEventListener('resize', (e) => {
+    //         e.target.innerWidth > 768 && setIsHamburgerActive(false)
+    //     })
 
-    }, [])
+    // }, [])
+
+    // useEffect(() => {
+    //     console.log('isHamburgerActive: ', isHamburgerActive);
+    // }, [isHamburgerActive])
 
     const navigate = useNavigate()
 
@@ -29,7 +32,7 @@ const Nav = (props) => {
     return (
         <div>
 
-            <div className={isHamburgerActive ? 'nav__hamburger_cntr' : 'nav__cntr'}
+            <div className={props.isHamburgerActive ? 'nav__cntr_hamburger' : 'nav__cntr'}
             >
                 <div className='nav__logo_and_title'
                     onClick={homeNavigate}
@@ -42,50 +45,41 @@ const Nav = (props) => {
 
                 <div className='nav__navbar'>
                     <div
-                        className={isHamburgerActive && 'hamburger'}
+                        className={props.isHamburgerActive ? 'hamburger_active' : 'hamburger'}
 
-                        onClick={() => setIsHamburgerActive(prevState => !prevState)}>
-                        <span
-                            className='bar'
-                        // className={isHamburgerActive ? 'bar bar_first_child' : 'bar'}
-                        ></span>
-                        <span
-                            className='bar'
-                        // className={isHamburgerActive ? 'bar bar_second_child' : 'bar'}
-                        ></span>
-                        <span
-                            className='bar'
-                        // className={isHamburgerActive ? 'bar bar_third_child' : 'bar'}
-                        ></span>
+                        onClick={() => props.setIsHamburgerActive(prevState => !prevState)}>
+                        <span className='bar'></span>
+                        <span className='bar'></span>
+                        <span className='bar'></span>
                     </div>
 
 
-                    <nav className={isHamburgerActive
-                        ? 'nav__el_cntr_hamburger_active'
-                        : 'nav__el_cntr'}>
+                    <nav className={props.isHamburgerActive
+                        ? 'nav__navbar_el_cntr_hamburger_active'
+                        : 'nav__navbar_el_cntr'}>
                         <NavLink to='/home'
-                            className={isHamburgerActive ? 'nav__hamburger_active_el' : 'nav__el'}
-                            onClick={() => setIsHamburgerActive(false)}>
+                            className={props.isHamburgerActive ? 'nav__navbar_el_hamburger_active' : 'nav__navbar_el'}
+                            onClick={() => props.setIsHamburgerActive(false)}>
                             {DICT[props.lang].home}
                         </NavLink>
                         <NavLink to='/people'
-                            className={isHamburgerActive ? 'nav__hamburger_active_el' : 'nav__el'}
-                            onClick={() => setIsHamburgerActive(false)}>
+                            className={props.isHamburgerActive ? 'nav__navbar_el_hamburger_active' : 'nav__navbar_el'}
+                            onClick={() => props.setIsHamburgerActive(false)}>
                             {DICT[props.lang].characters}
                         </NavLink>
                         <NavLink to='/planets'
-                            className={isHamburgerActive ? 'nav__hamburger_active_el' : 'nav__el'}
-                            onClick={() => setIsHamburgerActive(false)}>
+                            className={props.isHamburgerActive ? 'nav__navbar_el_hamburger_active' : 'nav__navbar_el'}
+                            onClick={() => props.setIsHamburgerActive(false)}>
                             {DICT[props.lang].planets}
                         </NavLink>
                         <NavLink to='/films'
-                            className={isHamburgerActive ? 'nav__hamburger_active_el' : 'nav__el'}
-                            onClick={() => setIsHamburgerActive(false)}>
+                            className={props.isHamburgerActive ? 'nav__navbar_el_hamburger_active' : 'nav__navbar_el'}
+                            onClick={() => props.setIsHamburgerActive(false)}>
                             {DICT[props.lang].films}
                         </NavLink>
                         <NavLink to='/contact'
-                            className={isHamburgerActive ? 'nav__hamburger_active_el' : 'nav__el'}
-                            onClick={() => setIsHamburgerActive(false)}>
+                            className={props.isHamburgerActive ? 'nav__navbar_el_hamburger_active' : 'nav__navbar_el'}
+                            onClick={() => props.setIsHamburgerActive(false)}>
                             {DICT[props.lang].contact}
                         </NavLink>
                     </nav>

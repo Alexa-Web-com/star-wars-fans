@@ -69,7 +69,8 @@ const Planet = (props) => {
                 ?
                 <Spinner />
                 :
-                <div className='planet__cntr'>
+                <div className='planet__cntr'
+                    onClick={() => props.setIsHamburgerActive(false)}>
 
                     <figure className='planet__background_figure'>
                         <img src={planet__backgroud_img} alt='star wars wallpaper' className='planet__background_img' />

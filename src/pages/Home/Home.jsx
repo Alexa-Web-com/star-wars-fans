@@ -6,7 +6,8 @@ import home__backgroud_img from '../../assets/backgrounds/home.webp'
 const Home = (props) => {
 
     return (
-        <div className='home__cntr'>
+        <div className='home__cntr'
+            onClick={() => props.setIsHamburgerActive(false)}>
             <figure className='home__background_figure'>
                 <img src={home__backgroud_img} alt='star wars wallpaper' className='home__background_img' />
             </figure>

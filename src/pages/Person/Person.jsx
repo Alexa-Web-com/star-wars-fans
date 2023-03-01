@@ -91,7 +91,8 @@ const Person = (props) => {
                 ?
                 <Spinner />
                 :
-                <div className='person__cntr'>
+                <div className='person__cntr'
+                    onClick={() => props.setIsHamburgerActive(false)}>
 
                     <figure className='person__background_figure'>
                         <img src={person__backgroud_img} alt='star wars wallpaper' className='person__background_img' />

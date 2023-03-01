@@ -27,6 +27,8 @@ function App() {
   const [planets, setPlanets] = useState([])
   const [films, setFilms] = useState([])
 
+  const [isHamburgerActive, setIsHamburgerActive] = useState(false)
+
   // USTALENIE STANU JĘZYK
   useEffect(() => {
     const browserLanguage = navigator.language
@@ -35,26 +37,43 @@ function App() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
+  //  USUNIECIE HAM GDY SZEROKI EKREAN ORAZ useEffect CLEANUP
+  useEffect(() => {
+    window.addEventListener('resize', (e) => {
+      e.target.innerWidth > 768 && setIsHamburgerActive(false)
+    })
+
+    return () => window.removeEventListener('resize', (e) => {
+      e.target.innerWidth > 768 && setIsHamburgerActive(false)
+    })
+
+  }, [])
+
+  useEffect(() => {
+    console.log('isHamburgerActive: ', isHamburgerActive);
+  }, [isHamburgerActive])
 
   return (
     <BrowserRouter>
-      <Nav lang={lang} setLang={setLang} />
+      <Nav lang={lang} setLang={setLang} isHamburgerActive={isHamburgerActive} setIsHamburgerActive={setIsHamburgerActive} />
       <audio className="audio"
         // autoPlay='autoplay'
         controls={true} loop>
         <source src={audio} />
       </audio>
       <Routes>
-        <Route path='/home' element={<Home lang={lang} />} />
-        <Route path='/people' element={<Characters lang={lang} characters={characters} setCharacters={setCharacters} />} />
-        <Route path='/planets' element={<Planets lang={lang} planets={planets} setPlanets={setPlanets} />} />
-        <Route path='/films' element={<Films lang={lang} films={films} setFilms={setFilms} />} />
-        <Route path='/contact' element={<Contact lang={lang} />} />
-        <Route path='*' element={<Home lang={lang} />} />
+        <Route path='/home' element={<Home lang={lang} isHamburgerActive={isHamburgerActive} setIsHamburgerActive={setIsHamburgerActive} />} />
 
-        <Route path='people/:id' element={<Person lang={lang} />} />
-        <Route path='planets/:id' element={<Planet lang={lang} />} />
-        <Route path='films/:id' element={<Film lang={lang} />} />
+        <Route path='/people' element={<Characters lang={lang} characters={characters} setCharacters={setCharacters} isHamburgerActive={isHamburgerActive} setIsHamburgerActive={setIsHamburgerActive} />} />
+        <Route path='/planets' element={<Planets lang={lang} planets={planets} setPlanets={setPlanets} isHamburgerActive={isHamburgerActive} setIsHamburgerActive={setIsHamburgerActive} />} />
+        <Route path='/films' element={<Films lang={lang} films={films} setFilms={setFilms} isHamburgerActive={isHamburgerActive} setIsHamburgerActive={setIsHamburgerActive} />} />
+
+        <Route path='/contact' element={<Contact lang={lang} isHamburgerActive={isHamburgerActive} setIsHamburgerActive={setIsHamburgerActive} />} />
+        <Route path='*' element={<Home />} />
+
+        <Route path='people/:id' element={<Person lang={lang} isHamburgerActive={isHamburgerActive} setIsHamburgerActive={setIsHamburgerActive} />} />
+        <Route path='planets/:id' element={<Planet lang={lang} isHamburgerActive={isHamburgerActive} setIsHamburgerActive={setIsHamburgerActive} />} />
+        <Route path='films/:id' element={<Film lang={lang} isHamburgerActive={isHamburgerActive} setIsHamburgerActive={setIsHamburgerActive} />} />
       </Routes>
       <Footer />
     </BrowserRouter>

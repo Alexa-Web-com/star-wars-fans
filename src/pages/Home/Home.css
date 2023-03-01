@@ -36,12 +36,17 @@
 @media screen and (max-width: 768px) {
 
     .home__wrapper {
-
         font-size: 1.2rem;
         padding-top: 1rem;
-        padding-right: 2rem;
+        padding-right: 30%;
         padding-bottom: 2rem;
         padding-left: 1rem;
     }
 
+}
+
+@media screen and (max-width: 480px) {
+    .home__wrapper {
+        padding-right: 1rem;
+    }
 }
