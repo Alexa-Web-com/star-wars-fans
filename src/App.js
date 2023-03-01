@@ -19,7 +19,7 @@ import Film from './pages/Film/Film'
 import { useGetDataUrl } from './utils/useGetDataUrl'
 import Spinner from './components/Spinner/Spinner';
 
-// test
+
 function App() {
   const [lang, setLang] = useState('en-EN')
 
