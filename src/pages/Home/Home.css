@@ -1,0 +1,47 @@
+.home__cntr {
+    background-color: black;
+    position: relative;
+}
+
+.home__background_figure {
+    position: fixed;
+    top: 4rem;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.home__background_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.home__wrapper {
+    position: relative;
+    top: 5rem;
+    color: white;
+    font-size: 1.5rem;
+    line-height: 1.5em;
+    padding-top: 2rem;
+    padding-right: 45%;
+    padding-bottom: 2rem;
+    padding-left: 2rem;
+}
+
+.home__links {
+    color: yellow;
+}
+
+@media screen and (max-width: 768px) {
+
+    .home__wrapper {
+
+        font-size: 1.2rem;
+        padding-top: 1rem;
+        padding-right: 2rem;
+        padding-bottom: 2rem;
+        padding-left: 1rem;
+    }
+
+}

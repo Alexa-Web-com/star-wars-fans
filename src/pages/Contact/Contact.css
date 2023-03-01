@@ -1,0 +1,129 @@
+.contact__cntr {
+    background-color: black;
+    height: 100vh;
+}
+
+.contact__background_figure {
+    position: fixed;
+    top: 4rem;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.contact__background_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contact__wrapper {
+    position: relative;
+    color: white;
+    top: 4rem;
+    padding-top: 2rem;
+    padding-left: 50%;
+    padding-right: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact_form_cntr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact__form_title {
+    font-size: 1.6rem;
+    margin-bottom: 1.2rem;
+    color: yellow;
+}
+
+.contact__form_el_cntr {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact__form_el {
+    font-size: 1.2rem;
+    width: 400px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+input::placeholder {
+    position: absolute;
+    top: 1px;
+    left: 5px
+}
+
+textarea {
+    padding-left: 5px;
+    height: 4rem;
+    justify-self: flex-start
+}
+
+.contact__form_send_btn {
+    align-self: center;
+    width: 100px;
+    height: 40px;
+    margin-top: 0.5rem;
+    font-size: 1.3rem;
+    color: white;
+    background-color: rgb(31, 106, 245);
+    border-radius: 5px;
+}
+
+.contact_details_cntr {
+    margin-top: 2.5rem;
+}
+
+.contact__details_el {
+    font-size: 1.2rem;
+    outline: none;
+}
+
+a {
+    color: rgb(31, 106, 245);
+    ;
+}
+
+@media screen and (max-width: 768px) {
+
+    .contact__background_figure {
+        position: fixed;
+        top: 4rem;
+        width: 100%;
+    }
+
+    .contact__background_img {
+        width: 100%;
+        object-fit: contain;
+        transform: scaleX(-1);
+    }
+
+    .contact__wrapper {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        padding-left: 0;
+        padding-right: 0;
+        max-width: 90%;
+        margin: auto;
+    }
+
+    .contact_form_cntr {
+        max-width: 100%;
+    }
+
+    .contact__form_el_cntr {
+        max-width: 100%;
+    }
+
+    .contact__form_el {
+        max-width: 100%;
+    }
+
+}

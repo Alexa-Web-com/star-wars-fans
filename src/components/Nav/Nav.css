@@ -1,0 +1,236 @@
+.nav__cntr {
+    position: fixed;
+    width: 100%;
+    background-image: linear-gradient(to right, black, black, rgb(31, 106, 245), black);
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 4rem;
+    height: 4rem;
+
+}
+
+.nav__logo_and_title {
+    display: flex;
+    flex-direction: row;
+}
+
+.nav__logo_and_title:hover {
+    cursor: pointer;
+}
+
+.nav_logo {
+    width: 60px;
+    margin: 0 0.5rem;
+
+}
+
+.nav_title {
+    color: yellow;
+    margin: 0 0.5rem;
+    text-align: center;
+}
+
+
+.nav__el_cntr {
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav__el {
+    font-size: 1.7rem;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s ease;
+    padding: 0 0.5rem;
+}
+
+.nav__el:hover {
+    font-weight: bold;
+}
+
+
+.nav__lang {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    /* padding: 5px; */
+    align-self: flex-start;
+
+}
+
+.nav__language_el {
+    min-width: 4rem;
+    text-align: right;
+}
+
+.nav__language_el:hover {
+    cursor: pointer;
+}
+
+.nav__language_icon {
+    margin: 0 0.5rem;
+}
+
+.active {
+    color: yellow;
+    font-weight: bold;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+@media screen and (max-width: 815px) {
+
+    .nav__cntr {
+        background-image: linear-gradient(to right, black, black, rgb(31, 106, 245), black, black);
+    }
+
+    .nav__hamburger_cntr {
+        background-image: linear-gradient(to right, black, black, rgb(31, 106, 245), black, black);
+    }
+
+    .nav_title {
+        display: none;
+    }
+
+
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .nav__hamburger_cntr {
+        position: fixed;
+        width: 100%;
+        background-image: linear-gradient(to right, black, black, rgb(31, 106, 245), black, black);
+        top: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 10;
+        min-height: 4rem;
+    }
+
+    .nav_title {
+        display: block;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    /* .hamburger_active {
+        display: block;
+        cursor: pointer;
+    } */
+
+    /* .bar_active {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        background-color: white;
+    } */
+
+    .hamburger span:nth-child(1) {
+        /* .bar_first_child { */
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger span:nth-child(2) {
+        /* .bar_second_child { */
+        opacity: 0;
+    }
+
+    .hamburger span:nth-child(3) {
+        /* .bar_third_child { */
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav__el_cntr_hamburger_active {
+        position: fixed;
+        right: 0;
+        width: 100%;
+        top: 4rem;
+        background-image: linear-gradient(to right, black, black, rgb(31, 106, 245), black, black);
+        z-index: 5;
+        text-align: center;
+        transition: 0.3s;
+        flex-direction: column;
+    }
+
+    .nav__hamburger_active_el {
+        font-size: 1.5rem;
+        color: white;
+        text-decoration: none;
+        transition: 0.3s ease;
+        z-index: 5;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav__hamburger_active_el:hover {
+        font-weight: bold;
+    }
+
+    .nav__hamburger_active_el.active {
+        color: yellow;
+        font-weight: bold;
+    }
+
+    .nav__el_cntr {
+        display: none;
+    }
+
+
+
+
+    .nav__el {
+        margin: 16px 0;
+        font-size: 1.7rem;
+        color: white;
+        color: blueviolet;
+        text-decoration: none;
+        transition: 0.3s ease;
+        padding: 0 0.5rem;
+    }
+
+    .nav__el_cntr.active {
+        left: 50%;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+
+    .nav__cntr {
+        background-image: linear-gradient(to right, black, black, rgb(31, 106, 245), black, black);
+    }
+
+    .nav__hamburger_cntr {
+        background-image: linear-gradient(to right, black, black, rgb(31, 106, 245), black, black);
+    }
+
+    .nav_title {
+        display: none;
+    }
+
+
+}

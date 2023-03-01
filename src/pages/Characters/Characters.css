@@ -1,0 +1,59 @@
+.characters__cntr {
+    background-color: black;
+    color: white;
+}
+
+.characters__background_figure {
+    position: fixed;
+    top: 4rem;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.characters__background_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.characters__wrapper {
+    position: relative;
+    top: 4rem;
+    z-index: 9;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 3rem;
+    font-size: 1.3rem;
+}
+
+.characters__content_cntr {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.characters__person_cntr {
+    width: 330px;
+    margin: 2rem;
+    padding: 2.5rem;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+.characters__person_name {
+    color: yellow;
+}
+
+.characters__person_item_desc {
+    font-size: 1rem;
+    color: lightskyblue
+}
+
+.characters__more {
+    color: rgb(46, 166, 241)
+}
