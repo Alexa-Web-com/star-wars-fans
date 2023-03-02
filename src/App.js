@@ -53,7 +53,7 @@ function App() {
         <Route path='/films' element={<Films lang={lang} films={films} setFilms={setFilms} />} />
 
         <Route path='/contact' element={<Contact lang={lang} />} />
-        <Route path='*' element={<Home />} />
+        <Route path='*' element={<Home lang={lang} />} />
 
         <Route path='people/:id' element={<Person lang={lang} />} />
         <Route path='planets/:id' element={<Planet lang={lang} />} />
