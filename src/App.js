@@ -1,6 +1,6 @@
 import './App.css';
 import { useEffect, useState } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, HashRouter, Routes, Route } from 'react-router-dom'
 import audio from './assets/audio/StarWarsTheme.mp3'
 
 
@@ -32,7 +32,7 @@ function App() {
   }, [])
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Nav lang={lang} setLang={setLang} />
       <audio className="audio"
         controls={true} loop>
@@ -53,7 +53,7 @@ function App() {
         <Route path='films/:id' element={<Film lang={lang} />} />
       </Routes>
       <Footer />
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
