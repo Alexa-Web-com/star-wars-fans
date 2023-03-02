@@ -23,7 +23,7 @@ function App() {
   const [planets, setPlanets] = useState([])
   const [films, setFilms] = useState([])
 
-  // USTALENIE STANU JĘZYK
+
   useEffect(() => {
     const browserLanguage = navigator.language
     const appLanguage = browserLanguage === 'pl' ? 'pl-PL' : 'en-EN'
