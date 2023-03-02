@@ -35,7 +35,6 @@ function App() {
     <BrowserRouter>
       <Nav lang={lang} setLang={setLang} />
       <audio className="audio"
-        // autoPlay='autoplay'
         controls={true} loop>
         <source src={audio} />
       </audio>
