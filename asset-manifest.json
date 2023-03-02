@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/star-wars-funs/static/css/main.7d9f667f.css",
+    "main.js": "/star-wars-funs/static/js/main.393b029f.js",
+    "static/media/StarWarsTheme.mp3": "/star-wars-funs/static/media/StarWarsTheme.b55a427adaea8bb4f86a.mp3",
+    "static/media/film.jpg": "/star-wars-funs/static/media/film.88b2ecfb949f823d2f1e.jpg",
+    "static/media/characters.webp": "/star-wars-funs/static/media/characters.8748510cc7ab976fd1cb.webp",
+    "static/media/home.webp": "/star-wars-funs/static/media/home.be5e89dc654bc541282e.webp",
+    "static/media/person.jpg": "/star-wars-funs/static/media/person.b04191d783620485dae2.jpg",
+    "static/media/planets.jpg": "/star-wars-funs/static/media/planets.2e4d4dcdf11c8b4d3d2d.jpg",
+    "static/media/films.jpg": "/star-wars-funs/static/media/films.981e880d207cc5879010.jpg",
+    "static/media/contact.webp": "/star-wars-funs/static/media/contact.3e27d3366a1dcda688bd.webp",
+    "static/media/planet.webp": "/star-wars-funs/static/media/planet.ed61d46315fe78baf6a0.webp",
+    "static/media/Star_Wars_Logo.svg": "/star-wars-funs/static/media/Star_Wars_Logo.dba53346071790164aae5a3f7d01797b.svg",
+    "index.html": "/star-wars-funs/index.html",
+    "main.7d9f667f.css.map": "/star-wars-funs/static/css/main.7d9f667f.css.map",
+    "main.393b029f.js.map": "/star-wars-funs/static/js/main.393b029f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7d9f667f.css",
+    "static/js/main.393b029f.js"
+  ]
+}
