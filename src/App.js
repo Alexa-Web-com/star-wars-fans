@@ -35,8 +35,6 @@ function App() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-// Test
-
   return (
     <BrowserRouter>
       <Nav lang={lang} setLang={setLang} />
