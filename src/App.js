@@ -16,10 +16,6 @@ import Person from './pages/Person/Person';
 import Planet from './pages/Planet/Planet';
 import Film from './pages/Film/Film'
 
-import { useGetDataUrl } from './utils/useGetDataUrl'
-import Spinner from './components/Spinner/Spinner';
-
-
 function App() {
   const [lang, setLang] = useState('en-EN')
 
