@@ -96,14 +96,14 @@ const Contact = (props) => {
                                 <span>www: </span>
                                 <a href='https://alexa-web.com/home'>alexa-web.com</a>
                             </p>
-                            <p className='contact__details_el'>
+                            {/* <p className='contact__details_el'>
                                 <span>email: </span>
                                 <a href='mailto:info@alexa-web.com?subject=Fan Message' target='_blank' rel='noreferrer'>info@alexa-web.com</a>
                             </p>
                             <p className='contact__details_el'>
                                 <span>tel: </span>
                                 <a href='tel:+48887638906'>+48 887 638 906</a>
-                            </p>
+                            </p> */}
                         </div>
                     </div>
                 </div>
