@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/star-wars-funs/static/css/main.94b5510b.css",
+    "main.css": "/star-wars-funs/static/css/main.7c9ecfa5.css",
     "main.js": "/star-wars-funs/static/js/main.fe737487.js",
     "static/media/StarWarsTheme.mp3": "/star-wars-funs/static/media/StarWarsTheme.b55a427adaea8bb4f86a.mp3",
     "static/media/film.jpg": "/star-wars-funs/static/media/film.88b2ecfb949f823d2f1e.jpg",
@@ -13,11 +13,11 @@
     "static/media/planet.webp": "/star-wars-funs/static/media/planet.ed61d46315fe78baf6a0.webp",
     "static/media/Star_Wars_Logo.svg": "/star-wars-funs/static/media/Star_Wars_Logo.dba53346071790164aae5a3f7d01797b.svg",
     "index.html": "/star-wars-funs/index.html",
-    "main.94b5510b.css.map": "/star-wars-funs/static/css/main.94b5510b.css.map",
+    "main.7c9ecfa5.css.map": "/star-wars-funs/static/css/main.7c9ecfa5.css.map",
     "main.fe737487.js.map": "/star-wars-funs/static/js/main.fe737487.js.map"
   },
   "entrypoints": [
-    "static/css/main.94b5510b.css",
+    "static/css/main.7c9ecfa5.css",
     "static/js/main.fe737487.js"
   ]
 }
