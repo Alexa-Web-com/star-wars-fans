@@ -11,9 +11,6 @@ import Loading from '../../components/Loading/Loading'
 import { API } from '../../utils/constans'
 import person__backgroud_img from '../../assets/backgrounds/person.jpg'
 
-
-
-
 const Person = (props) => {
     const [homeworld, setHomeworld] = useState([])
     const [films, setFilms] = useState([])
@@ -91,8 +88,7 @@ const Person = (props) => {
                 ?
                 <Spinner />
                 :
-                <div className='person__cntr'
-                    onClick={() => props.setIsHamburgerActive(false)}>
+                <div className='person__cntr'>
 
                     <figure className='person__background_figure'>
                         <img src={person__backgroud_img} alt='star wars wallpaper' className='person__background_img' />
@@ -100,7 +96,7 @@ const Person = (props) => {
 
                     <div className='person__page_wrapper'>
                         <Link className='back_link'
-                            onClick={backHandler}>{`< Back`}</Link>
+                            onClick={backHandler}>{`< ${DICT[props.lang].backLink}`}</Link>
 
                         <div className='person__wrapper'>
 

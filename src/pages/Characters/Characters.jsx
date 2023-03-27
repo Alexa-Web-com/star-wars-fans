@@ -29,8 +29,7 @@ const Characters = (props) => {
                 ?
                 <Spinner />
                 :
-                <div className='characters__cntr'
-                    onClick={() => props.setIsHamburgerActive(false)}>
+                <div className='characters__cntr'>
 
                     <figure className='characters__background_figure'>
                         <img src={characters__backgroud_img} alt='star wars wallpaper' className='characters__background_img' />

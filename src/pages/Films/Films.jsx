@@ -7,7 +7,6 @@ import { useGetDataUrl } from '../../utils/useGetDataUrl'
 import { API } from '../../utils/constans'
 import films__backgroud_img from '../../assets/backgrounds/films.jpg'
 
-
 const Films = (props) => {
     const [searchName, setSearchName] = useState('')
 
@@ -30,8 +29,7 @@ const Films = (props) => {
                 ?
                 <Spinner />
                 :
-                <div className='films__cntr'
-                    onClick={() => props.setIsHamburgerActive(false)}>
+                <div className='films__cntr'>
                     <div className='films__content_cntr'>
                         <input className='app__search_input'
                             type="text"

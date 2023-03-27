@@ -11,7 +11,6 @@ import Loading from '../../components/Loading/Loading'
 import { API } from '../../utils/constans'
 import planet__backgroud_img from '../../assets/backgrounds/planet.webp'
 
-
 const Planet = (props) => {
     const [residents, setResidents] = useState([])
     const [films, setFilms] = useState([])
@@ -69,8 +68,7 @@ const Planet = (props) => {
                 ?
                 <Spinner />
                 :
-                <div className='planet__cntr'
-                    onClick={() => props.setIsHamburgerActive(false)}>
+                <div className='planet__cntr'>
 
                     <figure className='planet__background_figure'>
                         <img src={planet__backgroud_img} alt='star wars wallpaper' className='planet__background_img' />
@@ -78,7 +76,7 @@ const Planet = (props) => {
 
                     <div className='planet__page_wrapper'>
                         <Link className='back_link'
-                            onClick={backHandler}>{`< Back`}</Link>
+                            onClick={backHandler}>{`< ${DICT[props.lang].backLink}`}</Link>
 
                         <div className='person__wrapper'>
 

@@ -5,9 +5,7 @@
 }
 
 .back_link {
-    color: blue;
-    /* color: lightskyblue; */
-    /* color: white; */
+    color: white;
     align-self: flex-start;
     padding-top: 0.5rem;
 }
@@ -18,7 +16,7 @@
     right: 0;
     height: 1.5rem;
     width: 16rem;
-    z-index: 1;
+    z-index: 10;
 }
 
 .app__search_input {
@@ -45,9 +43,6 @@
     .audio {
         position: fixed;
         top: 4rem;
-        right: 0;
-        height: 1.5rem;
         width: 100%;
-        z-index: 1;
     }
 }

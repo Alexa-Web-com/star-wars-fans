@@ -30,6 +30,7 @@ export const DICT = {
         descFive: ` The universe of Star Wars is generally similar to ours but its laws of physics are less strict allowing for more imaginative stories. `,
 
         moreInfoLink: "More...",
+        backLink: "Back",
 
         contactFormTitle: "Contact Form",
         contactFormUserNameInputPlaceholder: "Your First Name and Surname",
@@ -37,6 +38,7 @@ export const DICT = {
         contactFormUserMessageInputPlaceholder: "Your message",
         contactFormSendBtn: "Send",
         contactSentMessageFromPage: "Your Message has been sent!",
+        contactEmailInvalid: "Email is invalid",
 
         contactOurDetailsTitle: "Our details",
         contactOurDetailsName: "ALEXA-WEB Aleksandra Wilczynska",
@@ -110,6 +112,7 @@ export const DICT = {
         descFive: `Uniwersum Gwiezdnych Wojen jest ogólnie podobne do naszego, ale jego prawa fizyki są mniej surowe, co pozwala na bardziej pomysłowe historie. `,
 
         moreInfoLink: "Więcej...",
+        backLink: "Powrót",
 
         contactFormTitle: "Formularz kontaktowy",
         contactFormUserNameInputPlaceholder: "Twoje Imię i Nazwisko",
@@ -117,7 +120,7 @@ export const DICT = {
         contactFormUserMessageInputPlaceholder: "Twoja wiadomość",
         contactFormSendBtn: "Wyślij",
         contactSentMessageFromPage: "Twoja wiadomość została wysłana!",
-
+        contactEmailInvalid: "Adres email jest nieprawidłowy",
 
         contactOurDetailsTitle: "Nasze dane",
         contactOurDetailsName: "ALEXA-WEB Aleksandra Wilczyńska",
