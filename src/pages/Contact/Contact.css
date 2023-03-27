@@ -79,6 +79,7 @@ textarea {
 
 .contact_details_cntr {
     margin-top: 2.5rem;
+    background-color: rgba(0, 0, 0, 0.200);
 }
 
 .contact__details_el {
