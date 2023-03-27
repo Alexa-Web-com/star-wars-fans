@@ -7,8 +7,6 @@ import Spinner from '../../components/Spinner/Spinner'
 import { API } from '../../utils/constans'
 import planets__backgroud_img from '../../assets/backgrounds/planets.jpg'
 
-
-
 const Planets = (props) => {
     const [searchName, setSearchName] = useState('')
 
@@ -31,8 +29,7 @@ const Planets = (props) => {
                 ?
                 <Spinner />
                 :
-                <div className='planets__cntr'
-                    onClick={() => props.setIsHamburgerActive(false)}>
+                <div className='planets__cntr'>
 
                     <figure className='planets__background_figure'>
                         <img src={planets__backgroud_img} alt='star wars wallpaper' className='planets__background_img' />

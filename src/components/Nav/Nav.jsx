@@ -5,7 +5,6 @@ import { NavLink, useNavigate } from 'react-router-dom'
 import logo from '../../assets/Star_Wars_Logo.svg'
 
 const Nav = (props) => {
-
     const [isHamburgerActive, setIsHamburgerActive] = useState(false)
 
     //  USUNIECIE HAM GDY SZEROKI EKRAN ORAZ useEffect CLEANUP
@@ -19,10 +18,6 @@ const Nav = (props) => {
         })
 
     }, [])
-
-    useEffect(() => {
-        console.log('isHamburgerActive: ', isHamburgerActive);
-    }, [isHamburgerActive])
 
     const navigate = useNavigate()
 
@@ -39,13 +34,14 @@ const Nav = (props) => {
                     <figure>
                         <img src={logo} alt='star wars logo' className='nav_logo' />
                     </figure>
-                    <h1 className='nav_title'>Star Wars Funs</h1>
+                    <h1 className='nav_title'>Star Wars Fans</h1>
                 </div>
 
                 <div className={isHamburgerActive
                     ? 'hamburger_active'
                     : 'hamburger'}
                     onClick={() => setIsHamburgerActive(prevState => !prevState)}>
+
                     <span className='bar'></span>
                     <span className='bar'></span>
                     <span className='bar'></span>
@@ -56,9 +52,6 @@ const Nav = (props) => {
                     : 'nav__navbar_el_cntr'}
                     onClick={() => setIsHamburgerActive(false)}
                 >
-                    {/* <div className='nav_navbar'
-                    > */}
-
                     <NavLink to='/home'
                         className={isHamburgerActive ? 'nav__navbar_el_hamburger_active' : 'nav__navbar_el'}>
                         {DICT[props.lang].home}
@@ -79,7 +72,7 @@ const Nav = (props) => {
                         className={isHamburgerActive ? 'nav__navbar_el_hamburger_active' : 'nav__navbar_el'}>
                         {DICT[props.lang].contact}
                     </NavLink>
-                    {/* </div> */}
+                    <div className={isHamburgerActive ? 'nav__navbar_empty_active' : 'nav__navbar_empty'}></div>
                 </nav>
 
                 <div className='nav__lang'>

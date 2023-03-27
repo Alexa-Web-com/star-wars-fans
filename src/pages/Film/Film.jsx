@@ -11,7 +11,6 @@ import Loading from '../../components/Loading/Loading'
 import { API } from '../../utils/constans'
 import film__backgroud_img from '../../assets/backgrounds/film.jpg'
 
-
 const Film = (props) => {
     const [characters, setCharacters] = useState([])
     const [planets, setPlanets] = useState([])
@@ -103,8 +102,7 @@ const Film = (props) => {
                 ?
                 <Spinner />
                 :
-                <div className='film__cntr'
-                    onClick={() => props.setIsHamburgerActive(false)}>
+                <div className='film__cntr'>
 
                     <figure className='person__background_figure'>
                         <img src={film__backgroud_img} alt='star wars wallpaper' className='person__background_img' />
@@ -112,7 +110,7 @@ const Film = (props) => {
 
                     <div className='person__page_wrapper'>
                         <Link className='back_link'
-                            onClick={backHandler}>{`< Back`}</Link>
+                            onClick={backHandler}>{`< ${DICT[props.lang].backLink}`}</Link>
 
                         <div className='film__wrapper'>
 

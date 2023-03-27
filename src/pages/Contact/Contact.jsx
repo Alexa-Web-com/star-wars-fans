@@ -3,20 +3,30 @@ import { DICT } from '../../utils/constans'
 import { useState } from 'react'
 import contact__backgroud_img from '../../assets/backgrounds/contact.webp'
 
-
 const Contact = (props) => {
     const [userName, setUserName] = useState('')
     const [userEmail, setUserEmail] = useState('')
     const [userMessage, setUserMessage] = useState('')
 
+    const [error, setError] = useState(null);
+
     const [sentMessage, setSentMessage] = useState(false)
+
+    const isValidEmail = (email) => {
+        return /\S+@\S+\.\S+/.test(email);
+    }
+
+    const checkAndSetEmail = e => {
+        if (!isValidEmail(e.target.value)) {
+            setError(DICT[props.lang].contactEmailInvalid);
+        } else {
+            setError(null);
+        }
+        setUserEmail(e.target.value);
+    };
 
     const sendUserMessage = (e) => {
         e.preventDefault()
-        console.log(`
-    message from ${userName}
-    userEmail: ${userEmail}
-    message: ${userMessage}`);
 
         setSentMessage(true)
 
@@ -33,15 +43,19 @@ const Contact = (props) => {
         <>
             {sentMessage
                 ?
-                <div className='contact__cntr'
-                    onClick={() => props.setIsHamburgerActive(false)}>
+                <div className='contact__cntr'>
 
                     <figure className='contact__background_figure'>
                         <img src={contact__backgroud_img} alt='star wars wallpaper' className='contact__background_img' />
                     </figure>
 
                     <div className='contact__wrapper'>
-                        <h1 className='contact__form_title'>{DICT[props.lang].contactSentMessageFromPage}</h1>
+                        {error
+                            ?
+                            <h1 style={{ color: 'red' }}>{error}</h1>
+                            :
+                            <h1 className='contact__form_title'>{DICT[props.lang].contactSentMessageFromPage}</h1>
+                        }
                     </div>
                 </div>
                 :
@@ -64,9 +78,10 @@ const Contact = (props) => {
                                     onChange={(e) => setUserName(e.target.value)}
                                     placeholder={DICT[props.lang].contactFormUserNameInputPlaceholder} />
                                 <input className='contact__form_el'
+                                    id="email"
                                     type="email"
                                     value={userEmail}
-                                    onChange={(e) => setUserEmail(e.target.value)}
+                                    onChange={(e) => checkAndSetEmail(e)}
                                     placeholder={DICT[props.lang].contactFormUserEmailInputPlaceholder} />
                                 <textarea className='contact__form_el'
                                     type="text"
@@ -96,14 +111,6 @@ const Contact = (props) => {
                                 <span>www: </span>
                                 <a href='https://alexa-web.com/home'>alexa-web.com</a>
                             </p>
-                            {/* <p className='contact__details_el'>
-                                <span>email: </span>
-                                <a href='mailto:info@alexa-web.com?subject=Fan Message' target='_blank' rel='noreferrer'>info@alexa-web.com</a>
-                            </p>
-                            <p className='contact__details_el'>
-                                <span>tel: </span>
-                                <a href='tel:+48887638906'>+48 887 638 906</a>
-                            </p> */}
                         </div>
                     </div>
                 </div>
