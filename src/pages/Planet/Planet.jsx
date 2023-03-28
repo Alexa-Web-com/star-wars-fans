@@ -78,7 +78,7 @@ const Planet = (props) => {
                         <Link className='back_link'
                             onClick={backHandler}>{`< ${DICT[props.lang].backLink}`}</Link>
 
-                        <div className='person__wrapper'>
+                        <div className='planet__wrapper'>
 
                             <h1 className='planet__name'>{planet.name}</h1>
 

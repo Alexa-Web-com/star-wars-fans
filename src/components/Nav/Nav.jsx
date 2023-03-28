@@ -10,11 +10,11 @@ const Nav = (props) => {
     //  USUNIECIE HAM GDY SZEROKI EKRAN ORAZ useEffect CLEANUP
     useEffect(() => {
         window.addEventListener('resize', (e) => {
-            e.target.innerWidth > 768 && setIsHamburgerActive(false)
+            e.target.innerWidth > 1024 && setIsHamburgerActive(false)
         })
 
         return () => window.removeEventListener('resize', (e) => {
-            e.target.innerWidth > 768 && setIsHamburgerActive(false)
+            e.target.innerWidth > 1024 && setIsHamburgerActive(false)
         })
 
     }, [])

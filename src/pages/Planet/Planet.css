@@ -27,7 +27,8 @@
 }
 
 .planet__wrapper {
-    max-width: 1200px;
+    max-width: 1000px;
+    width: 100%;
     margin: auto;
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -41,13 +42,13 @@
 .planet__details_cntr {
     text-align: left;
     padding: 2rem;
-    margin-top: 1rem;
+    margin-top: 2rem;
     background-color: rgb(255, 255, 0, 0.4)
 }
 
 .planet__name {
     font-style: italic;
-    color: yellow;
+    color: black;
 }
 
 .planet__details_value {

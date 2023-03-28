@@ -29,6 +29,7 @@
 
 .film__wrapper {
     max-width: 1200px;
+    width: 100%;
     margin: auto;
     padding-top: 2rem;
     padding-bottom: 1rem;

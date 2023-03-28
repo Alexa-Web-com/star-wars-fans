@@ -119,10 +119,7 @@
     }
 }
 
-
-
-
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
 
     /* NAGŁOWEK Z LOGO I TUTUŁEM, GDY HAM IS ACTIVE */
     .nav__cntr_hamburger {
