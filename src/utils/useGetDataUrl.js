@@ -20,7 +20,8 @@ export const useGetDataUrl = (url) => {
                 finally {
                     setIsSpinner(false)
                 }
-            } else {
+            }
+            if (typeof url === 'string') {
                 setIsSpinner(true)
                 try {
                     const res = await fetch(url)
