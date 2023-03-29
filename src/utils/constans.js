@@ -38,7 +38,9 @@ export const DICT = {
         contactFormUserMessageInputPlaceholder: "Your message",
         contactFormSendBtn: "Send",
         contactSentMessageFromPage: "Your Message has been sent!",
+        contactNameInvalid: "Please enter the correct details",
         contactEmailInvalid: "Email is invalid",
+        contactMessageInvalid: "Your message must contain at least 5 characters",
 
         contactOurDetailsTitle: "Our details",
         contactOurDetailsName: "ALEXA-WEB Aleksandra Wilczynska",
@@ -120,7 +122,9 @@ export const DICT = {
         contactFormUserMessageInputPlaceholder: "Twoja wiadomość",
         contactFormSendBtn: "Wyślij",
         contactSentMessageFromPage: "Twoja wiadomość została wysłana!",
+        contactNameInvalid: "Podaj prawidłowe dane",
         contactEmailInvalid: "Adres email jest nieprawidłowy",
+        contactMessageInvalid: "Twoja wiadomość musi zawierać przynajmniej 5 znaków",
 
         contactOurDetailsTitle: "Nasze dane",
         contactOurDetailsName: "ALEXA-WEB Aleksandra Wilczyńska",
