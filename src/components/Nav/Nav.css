@@ -15,7 +15,6 @@
     height: 100%;
 }
 
-/* LOGO & TYTUŁ */
 .nav__logo_and_title {
     display: flex;
     flex-direction: row;
@@ -36,12 +35,10 @@
     text-align: center;
 }
 
-/* NAVBAR - POZIOMO */
 .nav__navbar_el_cntr {
     display: flex;
     justify-content: space-around;
     width: 70%;
-    /* height: 100vh; */
 }
 
 .nav__navbar_el {
@@ -61,8 +58,6 @@
     font-weight: bold;
 }
 
-
-/* JĘZYKI */
 .nav__lang {
     display: flex;
     flex-direction: column;
@@ -82,7 +77,6 @@
     margin: 0 0.5rem;
 }
 
-/* UKRYTY HAMBURGER */
 .hamburger,
 .hamburger_active {
     display: none;
@@ -109,7 +103,6 @@
 
 @media screen and (max-width: 815px) {
 
-    /* przejsciowa szerokość (tabletowa?) gdy tytuł jest ukryty */
     .nav__cntr {
         background-image: linear-gradient(to right, black, black, rgb(31, 106, 245), black, black);
     }
@@ -121,7 +114,6 @@
 
 @media screen and (max-width: 1024px) {
 
-    /* NAGŁOWEK Z LOGO I TUTUŁEM, GDY HAM IS ACTIVE */
     .nav__cntr_hamburger {
         background-image: linear-gradient(to right, black, black, rgb(31, 106, 245), black, black);
         display: flex;
@@ -131,18 +123,15 @@
         height: 100%;
     }
 
-    /* POJAWIENIE SIE TYTUŁU */
     .nav_title {
         display: block;
     }
 
-    /*POJAWIENIE SIE HAM i HAM ACTIVE (dod. klasa dla ustawienia dzieci)*/
     .hamburger,
     .hamburger_active {
         display: block;
     }
 
-    /* USTAWIENIE DZIECI W HAM ACTIVE */
     .hamburger_active span:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
     }
@@ -155,7 +144,6 @@
         transform: translateY(-8px) rotate(-45deg);
     }
 
-    /* NAVBAR - PIONOWO - JAKO ROZWIJANA LISTA */
     .nav__navbar_el_cntr_hamburger_active {
         position: fixed;
         right: 0;
@@ -195,8 +183,6 @@
         height: 75vh;
     }
 
-
-    /* UKRYCIE ELEMENTU: NAVBAR - POZIOMO */
     .nav__navbar_el_cntr {
         display: none;
     }
@@ -204,10 +190,6 @@
 
 
 @media screen and (max-width: 480px) {
-
-    /* USUNIĘCIE TYTUŁU ORAZ
-    USTAWIENIE KOLORÓW DLA LOGO & HAM
-    ORAZ DLA NAVBAR - PIONOWO */
 
     .nav_title {
         display: none;
