@@ -18,7 +18,6 @@ const Planet = (props) => {
     const { id } = useParams()
     const navigate = useNavigate()
 
-    // GŁOWNY STAN W TYM KOMPONENCIE I JEGO USTALENIE NIEZALEŻNĄ FUNKCJĄ
     const [planet, setPlanet] = useState({})
 
     const url = `${API.planets}/${id}`
@@ -30,7 +29,6 @@ const Planet = (props) => {
         }
     }, [respUrlData])
 
-    // USTALENIE POJEDYNCZEGO ELEMENTU W OSOBNYM STANIE NIEZALEŻNĄ FUNKCJĄ
     const filmsUrlArr = planet.films
     const [filmsRespDataText, isSpinnerFilms] = useGetDataUrl(filmsUrlArr)
     useEffect(() => {
@@ -44,7 +42,6 @@ const Planet = (props) => {
         }
     }, [filmsRespDataText])
 
-    // USTALENIE POJEDYNCZEGO ELEMENTU W OSOBNYM STANIE NIEZALEŻNĄ FUNKCJĄ
     const residentsUrlArr = planet.residents
     const [residentsRespDataText, isSpinnerResidents] = useGetDataUrl(residentsUrlArr)
     useEffect(() => {
@@ -160,6 +157,5 @@ const Planet = (props) => {
         </>
     )
 }
-
 
 export default Planet

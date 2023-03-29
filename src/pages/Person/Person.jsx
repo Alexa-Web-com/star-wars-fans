@@ -20,7 +20,6 @@ const Person = (props) => {
     const { id } = useParams()
     const navigate = useNavigate()
 
-    // GŁOWNY STAN W TYM KOMPONENCIE I JEGO USTALENIE NIEZALEŻNĄ FUNKCJĄ
     const [person, setPerson] = useState({})
 
     const url = `${API.characters}/${id}`
@@ -31,7 +30,6 @@ const Person = (props) => {
         }
     }, [respUrlData])
 
-    // USTALENIE POJEDYNCZEGO ELEMENTU W OSOBNYM STANIE NIEZALEŻNĄ FUNKCJĄ
     const homeworldUrl = person.homeworld
     const [homeworldRespData, isSpinnerHomeworld] = useGetDataUrl(homeworldUrl)
     useEffect(() => {
@@ -46,7 +44,6 @@ const Person = (props) => {
         }
     }, [homeworldRespData])
 
-    // USTALENIE POJEDYNCZEGO ELEMENTU W OSOBNYM STANIE NIEZALEŻNĄ FUNKCJĄ
     const filmsUrlArr = person.films
     const [filmsRespDataText, isSpinnerFilms] = useGetDataUrl(filmsUrlArr)
     useEffect(() => {
@@ -60,7 +57,6 @@ const Person = (props) => {
         }
     }, [filmsRespDataText])
 
-    // USTALENIE POJEDYNCZYCH ELEMENTÓW W OSOBNYCH STANACH NIEZALEŻNĄ FUNKCJĄ
     const starshipsUrlArr = person.starships
     const vehiclesUrlArr = person.vehicles
     const [starshipsRespDataText, isSpinnerStarships] = useGetDataUrl(starshipsUrlArr)
@@ -182,6 +178,5 @@ const Person = (props) => {
             }</>
     )
 }
-
 
 export default Person

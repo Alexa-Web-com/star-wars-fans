@@ -10,7 +10,6 @@ import characters__backgroud_img from '../../assets/backgrounds/characters.webp'
 const Characters = (props) => {
     const [searchName, setSearchName] = useState('')
 
-    // USTALENIE STANU W App NIEZALEŻNĄ FUNKCJĄ
     const [respUrlDataCharacters, isSpinnerCharacters] = useGetDataUrl(API.characters)
     useEffect(() => {
         if (respUrlDataCharacters) {

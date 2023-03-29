@@ -13,12 +13,7 @@ const Contact = (props) => {
     const [isUserMessageValid, setIsUserMessageValid] = useState(true)
 
     const [valid, setValid] = useState(true)
-
     const [sentMessage, setSentMessage] = useState(false)
-
-    const isValidEmail = (email) => {
-        return /\S+@\S+\.\S+/.test(email);
-    }
 
     const handleUserNameChange = e => {
         if (e.target.value.length < 2) {
@@ -27,6 +22,10 @@ const Contact = (props) => {
             setIsUserNameValid(true);
         }
         setUserName(e.target.value);
+    }
+
+    const isValidEmail = (email) => {
+        return /\S+@\S+\.\S+/.test(email);
     }
 
     const handleUserEmailChange = e => {
@@ -49,17 +48,13 @@ const Contact = (props) => {
 
     const checkElemValidations = () => {
         let dataValid = true
-        if (!isUserNameValid) { dataValid = false }
-        if (!isUserEmailValid) { dataValid = false }
-        if (!isUserMessageValid) { dataValid = false }
-        console.log('dataValid from function: ', dataValid);
+        if (!isUserNameValid || !isUserEmailValid || !isUserMessageValid) { dataValid = false }
         return dataValid
     }
 
     const sendBtnClicked = (e) => {
         e.preventDefault()
         const dataValid = checkElemValidations()
-        console.log('dataValid from sendBtn: ', dataValid);
 
         if (dataValid) {
             setSentMessage(true)
@@ -71,15 +66,12 @@ const Contact = (props) => {
             setUserName('')
             setUserEmail('')
             setUserMessage('')
-
             setIsUserNameValid(true)
             setIsUserEmailValid(true)
             setIsUserMessageValid(true)
-        }
-        if (!dataValid) { setValid(false) }
-    }
 
-    useEffect(() => { console.log('valid: ', valid) }, [valid])
+        } else { setValid(false) }
+    }
 
     return (
         <>

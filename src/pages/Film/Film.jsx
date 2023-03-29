@@ -21,7 +21,6 @@ const Film = (props) => {
     const { id } = useParams()
     const navigate = useNavigate()
 
-    // GŁOWNY STAN W TYM KOMPONENCIE I JEGO USTALENIE NIEZALEŻNĄ FUNKCJĄ
     const [film, setFilm] = useState({})
 
     const url = `${API.films}/${id}`
@@ -33,7 +32,6 @@ const Film = (props) => {
         }
     }, [respUrlData])
 
-    // USTALENIE POJEDYNCZEGO ELEMENTU W OSOBNYM STANIE NIEZALEŻNĄ FUNKCJĄ
     const charactersUrlArr = film.characters
     const [charactersRespDataText, isSpinnerCharacters] = useGetDataUrl(charactersUrlArr)
     useEffect(() => {
@@ -47,7 +45,6 @@ const Film = (props) => {
         }
     }, [charactersRespDataText])
 
-    // USTALENIE POJEDYNCZEGO ELEMENTU W OSOBNYM STANIE NIEZALEŻNĄ FUNKCJĄ
     const planetsUrlArr = film.planets
     const [planetsRespDataText, isSpinnerPlanets] = useGetDataUrl(planetsUrlArr)
     useEffect(() => {
@@ -61,7 +58,6 @@ const Film = (props) => {
         }
     }, [planetsRespDataText])
 
-    // USTALENIE POJEDYNCZYCH ELEMENTÓW W OSOBNYCH STANACH NIEZALEŻNĄ FUNKCJĄ
     const starshipsUrlArr = film.starships
     const vehiclesUrlArr = film.vehicles
     const speciesUrlArr = film.species
@@ -209,11 +205,5 @@ const Film = (props) => {
         </>
     )
 }
-
-
-// filmStarships: "Starships: ",
-// filmVehicles: "Vehicles: ",
-// filmSpecies: "Species: ",
-
 
 export default Film

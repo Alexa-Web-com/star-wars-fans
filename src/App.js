@@ -1,9 +1,7 @@
 import './App.css';
 import { useEffect, useState } from 'react';
-import { BrowserRouter, HashRouter, Routes, Route } from 'react-router-dom'
+import { HashRouter, Routes, Route } from 'react-router-dom'
 import audio from './assets/audio/StarWarsTheme.mp3'
-
-
 import Nav from './components/Nav/Nav';
 import Home from './pages/Home/Home'
 import Characters from './pages/Characters/Characters'
@@ -11,7 +9,6 @@ import Planets from './pages/Planets/Planets'
 import Films from './pages/Films/Films'
 import Contact from './pages/Contact/Contact'
 import Footer from './components/Footer/Footer';
-
 import Person from './pages/Person/Person';
 import Planet from './pages/Planet/Planet';
 import Film from './pages/Film/Film'

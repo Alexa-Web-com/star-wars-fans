@@ -10,7 +10,6 @@ import planets__backgroud_img from '../../assets/backgrounds/planets.jpg'
 const Planets = (props) => {
     const [searchName, setSearchName] = useState('')
 
-    // USTALENIE STANU W App NIEZALEŻNĄ FUNKCJĄ
     const [respUrlDataPlanets, isSpinnerPlanets] = useGetDataUrl(API.planets)
     useEffect(() => {
         if (respUrlDataPlanets) {

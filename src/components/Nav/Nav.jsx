@@ -7,7 +7,6 @@ import logo from '../../assets/Star_Wars_Logo.svg'
 const Nav = (props) => {
     const [isHamburgerActive, setIsHamburgerActive] = useState(false)
 
-    //  USUNIECIE HAM GDY SZEROKI EKRAN ORAZ useEffect CLEANUP
     useEffect(() => {
         window.addEventListener('resize', (e) => {
             e.target.innerWidth > 1024 && setIsHamburgerActive(false)
@@ -94,7 +93,6 @@ const Nav = (props) => {
             </div>
 
         </div>
-
     )
 }
 

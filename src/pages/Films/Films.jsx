@@ -10,7 +10,6 @@ import films__backgroud_img from '../../assets/backgrounds/films.jpg'
 const Films = (props) => {
     const [searchName, setSearchName] = useState('')
 
-    // USTALENIE STANU W App NIEZALEŻNĄ FUNKCJĄ
     const [respUrlDataFilms, isSpinnerFilms] = useGetDataUrl(API.films)
     useEffect(() => {
         if (respUrlDataFilms) {
