@@ -2,6 +2,7 @@ import './Contact.css'
 import { DICT } from '../../utils/constans'
 import { useEffect, useState } from 'react'
 import contact__backgroud_img from '../../assets/backgrounds/contact.webp'
+import { isValidEmail } from '../../utils/isValidEmail'
 
 const Contact = (props) => {
     const [userName, setUserName] = useState('')
@@ -12,65 +13,46 @@ const Contact = (props) => {
     const [isUserEmailValid, setIsUserEmailValid] = useState(true)
     const [isUserMessageValid, setIsUserMessageValid] = useState(true)
 
-    const [valid, setValid] = useState(true)
     const [sentMessage, setSentMessage] = useState(false)
 
-    const handleUserNameChange = e => {
-        if (e.target.value.length < 2) {
-            setIsUserNameValid(false)
-        } else {
-            setIsUserNameValid(true);
-        }
-        setUserName(e.target.value);
-    }
+    useEffect(() => { setIsUserNameValid(true) }, [userName])
+    useEffect(() => { setIsUserEmailValid(true) }, [userEmail])
+    useEffect(() => { setIsUserMessageValid(true) }, [userMessage])
 
-    const isValidEmail = (email) => {
-        return /\S+@\S+\.\S+/.test(email);
-    }
-
-    const handleUserEmailChange = e => {
-        if (!isValidEmail(e.target.value)) {
-            setIsUserEmailValid(false)
-        } else {
-            setIsUserEmailValid(true);
-        }
-        setUserEmail(e.target.value);
-    }
-
-    const handleUserMessageChange = e => {
-        if (e.target.value.length < 5) {
-            setIsUserMessageValid(false);
-        } else {
-            setIsUserMessageValid(true);
-        }
-        setUserMessage(e.target.value);
-    }
-
-    const checkElemValidations = () => {
+    const isFormValid = () => {
         let dataValid = true
-        if (!isUserNameValid || !isUserEmailValid || !isUserMessageValid) { dataValid = false }
+        if (userName.length < 2) {
+            dataValid = false
+            setIsUserNameValid(false)
+        }
+        if (!isValidEmail(userEmail)) {
+            dataValid = false
+            setIsUserEmailValid(false)
+        }
+        if (userMessage.length < 5) {
+            dataValid = false
+            setIsUserMessageValid(false)
+        }
         return dataValid
     }
 
     const sendBtnClicked = (e) => {
         e.preventDefault()
-        const dataValid = checkElemValidations()
 
-        if (dataValid) {
-            setSentMessage(true)
+        if (!isFormValid()) { return }
 
-            setTimeout(() => {
-                setSentMessage(false)
-            }, 1000)
+        setSentMessage(true)
 
-            setUserName('')
-            setUserEmail('')
-            setUserMessage('')
-            setIsUserNameValid(true)
-            setIsUserEmailValid(true)
-            setIsUserMessageValid(true)
+        setTimeout(() => {
+            setSentMessage(false)
+        }, 1000)
 
-        } else { setValid(false) }
+        setUserName('')
+        setUserEmail('')
+        setUserMessage('')
+        setIsUserNameValid(true)
+        setIsUserEmailValid(true)
+        setIsUserMessageValid(true)
     }
 
     return (
@@ -103,29 +85,29 @@ const Contact = (props) => {
                             <form className='contact__form_el_cntr'
                                 onSubmit={sendBtnClicked}>
 
-                                <input className={(valid || isUserNameValid) ? 'contact__form_el' : 'contact__form_el_error'}
+                                <input className={(isUserNameValid) ? 'contact__form_el' : 'contact__form_el_error'}
                                     type="text"
                                     value={userName}
-                                    onChange={(e) => handleUserNameChange(e)}
+                                    onChange={(e) => setUserName(e.target.value)}
                                     placeholder={DICT[props.lang].contactFormUserNameInputPlaceholder} />
-                                {!valid && !isUserNameValid &&
+                                {!isUserNameValid &&
                                     <p className='contact__form_el_errMessage'>{DICT[props.lang].contactNameInvalid}</p>}
 
-                                <input className={(valid || isUserEmailValid) ? 'contact__form_el' : 'contact__form_el_error'}
+                                <input className={(isUserEmailValid) ? 'contact__form_el' : 'contact__form_el_error'}
                                     id="email"
                                     type="email"
                                     value={userEmail}
-                                    onChange={(e) => handleUserEmailChange(e)}
+                                    onChange={(e) => setUserEmail(e.target.value)}
                                     placeholder={DICT[props.lang].contactFormUserEmailInputPlaceholder} />
-                                {!valid && !isUserEmailValid &&
+                                {!isUserEmailValid &&
                                     <p className='contact__form_el_errMessage'>{DICT[props.lang].contactEmailInvalid}</p>}
 
-                                <textarea className={(valid || isUserMessageValid) ? 'contact__form_el' : 'contact__form_el_error'}
+                                <textarea className={(isUserMessageValid) ? 'contact__form_el' : 'contact__form_el_error'}
                                     type="text"
                                     value={userMessage}
-                                    onChange={(e) => handleUserMessageChange(e)}
+                                    onChange={(e) => setUserMessage(e.target.value)}
                                     placeholder={DICT[props.lang].contactFormUserMessageInputPlaceholder} />
-                                {!valid && !isUserMessageValid &&
+                                {!isUserMessageValid &&
                                     <p className='contact__form_el_errMessage'>{DICT[props.lang].contactMessageInvalid}</p>}
 
                                 <button
