@@ -150,4 +150,8 @@ a {
         max-width: 100%;
     }
 
+    .contact_details_cntr {
+        align-self: flex-start;
+        padding-left: 2rem;
+    }
 }

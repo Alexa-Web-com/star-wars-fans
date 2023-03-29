@@ -43,7 +43,7 @@ export const DICT = {
         contactMessageInvalid: "Your message must contain at least 5 characters",
 
         contactOurDetailsTitle: "Our details",
-        contactOurDetailsName: "ALEXA-WEB Aleksandra Wilczynska",
+        contactOurDetailsName: "ALEXA-WEB",
         contactOurDetailsAddressOne: "Lipnowska Str. 17/1",
         contactOurDetailsAddressTwo: "PL81-504 Gdynia, Poland",
 
@@ -127,7 +127,7 @@ export const DICT = {
         contactMessageInvalid: "Twoja wiadomość musi zawierać przynajmniej 5 znaków",
 
         contactOurDetailsTitle: "Nasze dane",
-        contactOurDetailsName: "ALEXA-WEB Aleksandra Wilczyńska",
+        contactOurDetailsName: "ALEXA-WEB",
         contactOurDetailsAddressOne: "ul. Lipnowska 17/1",
         contactOurDetailsAddressTwo: "81-504 Gdynia, Polska",
 
