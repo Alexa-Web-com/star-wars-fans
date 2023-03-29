@@ -98,6 +98,8 @@ textarea {
 }
 
 .contact_details_cntr {
+    align-self: flex-start;
+    padding-left: 20%;
     margin-top: 2.5rem;
     background-color: rgba(0, 0, 0, 0.200);
 }
@@ -112,6 +114,10 @@ a {
 }
 
 @media screen and (max-width: 768px) {
+
+    .contact__background_figure {
+        padding-top: 5rem;
+    }
 
     .contact__form_title {
         text-align: center;
@@ -143,6 +149,7 @@ a {
     }
 
     .contact__form_el_cntr {
+        margin-bottom: 2rem;
         max-width: 100%;
     }
 
@@ -151,7 +158,6 @@ a {
     }
 
     .contact_details_cntr {
-        align-self: flex-start;
         padding-left: 2rem;
     }
 }
