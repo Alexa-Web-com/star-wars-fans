@@ -3,6 +3,7 @@ import { DICT } from '../../utils/constans'
 import { useEffect, useState } from 'react'
 import contact__backgroud_img from '../../assets/backgrounds/contact.webp'
 import { isValidEmail } from '../../utils/isValidEmail'
+import emailjs from 'emailjs-com';
 
 const Contact = (props) => {
     const [userName, setUserName] = useState('')
@@ -41,18 +42,23 @@ const Contact = (props) => {
 
         if (!isFormValid()) { return }
 
-        setSentMessage(true)
+        emailjs.sendForm(process.env.REACT_APP_TO_SERVICE_ID, process.env.REACT_APP_TO_TEMPLATE_ID, e.target, process.env.REACT_APP_TO_USER_ID)
+            .then(() => {
+                setSentMessage(true)
 
-        setTimeout(() => {
-            setSentMessage(false)
-        }, 1000)
+                setTimeout(() => {
+                    setSentMessage(false)
+                }, 1000)
 
-        setUserName('')
-        setUserEmail('')
-        setUserMessage('')
-        setIsUserNameValid(true)
-        setIsUserEmailValid(true)
-        setIsUserMessageValid(true)
+                setUserName('')
+                setUserEmail('')
+                setUserMessage('')
+                setIsUserNameValid(true)
+                setIsUserEmailValid(true)
+                setIsUserMessageValid(true)
+            }, (error) => {
+                console.log(error.text)
+            })
     }
 
     return (
@@ -89,7 +95,8 @@ const Contact = (props) => {
                                     type="text"
                                     value={userName}
                                     onChange={(e) => setUserName(e.target.value)}
-                                    placeholder={DICT[props.lang].contactFormUserNameInputPlaceholder} />
+                                    placeholder={DICT[props.lang].contactFormUserNameInputPlaceholder}
+                                    name="name" />
                                 {!isUserNameValid &&
                                     <p className='contact__form_el_errMessage'>{DICT[props.lang].contactNameInvalid}</p>}
 
@@ -98,7 +105,8 @@ const Contact = (props) => {
                                     type="email"
                                     value={userEmail}
                                     onChange={(e) => setUserEmail(e.target.value)}
-                                    placeholder={DICT[props.lang].contactFormUserEmailInputPlaceholder} />
+                                    placeholder={DICT[props.lang].contactFormUserEmailInputPlaceholder}
+                                    name="email" />
                                 {!isUserEmailValid &&
                                     <p className='contact__form_el_errMessage'>{DICT[props.lang].contactEmailInvalid}</p>}
 
@@ -106,9 +114,12 @@ const Contact = (props) => {
                                     type="text"
                                     value={userMessage}
                                     onChange={(e) => setUserMessage(e.target.value)}
-                                    placeholder={DICT[props.lang].contactFormUserMessageInputPlaceholder} />
+                                    placeholder={DICT[props.lang].contactFormUserMessageInputPlaceholder}
+                                    name="message" />
                                 {!isUserMessageValid &&
                                     <p className='contact__form_el_errMessage'>{DICT[props.lang].contactMessageInvalid}</p>}
+
+                                <input type='hidden' name="page" value="STAR WARS FANS" ></input>
 
                                 <button
                                     className={userName && userEmail && userMessage ? 'contact__form_send_btn' : 'contact__form_send_btn_error'}
