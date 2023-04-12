@@ -145,7 +145,7 @@ const Contact = (props) => {
                             </p>
                             <p className='contact__details_el' style={{ paddingTop: "10px" }}>
                                 <span>www: </span>
-                                <a href='https://alexa-web.com/home'>alexa-web.com</a>
+                                <a href='https://alexa-web.com/'>alexa-web.com</a>
                             </p>
                         </div>
                     </div>
