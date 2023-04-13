@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/star-wars-fans/static/css/main.a60a76b0.css",
-    "main.js": "/star-wars-fans/static/js/main.feda7335.js",
+    "main.js": "/star-wars-fans/static/js/main.69526f00.js",
     "static/media/StarWarsTheme.mp3": "/star-wars-fans/static/media/StarWarsTheme.b55a427adaea8bb4f86a.mp3",
     "static/media/film.jpg": "/star-wars-fans/static/media/film.88b2ecfb949f823d2f1e.jpg",
     "static/media/characters.webp": "/star-wars-fans/static/media/characters.8748510cc7ab976fd1cb.webp",
@@ -11,14 +11,14 @@
     "static/media/films.jpg": "/star-wars-fans/static/media/films.981e880d207cc5879010.jpg",
     "static/media/contact.webp": "/star-wars-fans/static/media/contact.3e27d3366a1dcda688bd.webp",
     "static/media/planet.webp": "/star-wars-fans/static/media/planet.ed61d46315fe78baf6a0.webp",
-    "static/media/logoAlexaWeb.png": "/star-wars-fans/static/media/logoAlexaWeb.19e9855d2fd3fea8b334.png",
+    "static/media/logoAlexaWeb.png": "/star-wars-fans/static/media/logoAlexaWeb.5162fb2b4dc76259c39f.png",
     "static/media/Star_Wars_Logo.svg": "/star-wars-fans/static/media/Star_Wars_Logo.dba53346071790164aae5a3f7d01797b.svg",
     "index.html": "/star-wars-fans/index.html",
     "main.a60a76b0.css.map": "/star-wars-fans/static/css/main.a60a76b0.css.map",
-    "main.feda7335.js.map": "/star-wars-fans/static/js/main.feda7335.js.map"
+    "main.69526f00.js.map": "/star-wars-fans/static/js/main.69526f00.js.map"
   },
   "entrypoints": [
     "static/css/main.a60a76b0.css",
-    "static/js/main.feda7335.js"
+    "static/js/main.69526f00.js"
   ]
 }
