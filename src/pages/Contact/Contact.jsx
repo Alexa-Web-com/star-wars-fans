@@ -140,13 +140,17 @@ const Contact = (props) => {
                             <p className='contact__details_el'>
                                 {DICT[props.lang].contactOurDetailsAddressOne}
                             </p>
-                            <p className='contact__details_el'>
-                                {DICT[props.lang].contactOurDetailsAddressTwo}
-                            </p>
-                            <p className='contact__details_el' style={{ paddingTop: "10px" }}>
+                            <div className='contact__details_el' style={{ paddingTop: "10px" }}>
+                                <span>email: </span>
+                                <a href='mailto:info@alexa-web.com?subject=Customer Request'
+                                    target='_blank'
+                                    rel='noreferrer'
+                                >{DICT[props.lang].contactOurDetailsAddressTwo}</a>
+                            </div>
+                            <div className='contact__details_el'>
                                 <span>www: </span>
                                 <a href='https://alexa-web.com/'>alexa-web.com</a>
-                            </p>
+                            </div>
                         </div>
                     </div>
                 </div>

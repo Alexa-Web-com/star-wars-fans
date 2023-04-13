@@ -44,8 +44,8 @@ export const DICT = {
 
         contactOurDetailsTitle: "Our details",
         contactOurDetailsName: "ALEXA-WEB",
-        contactOurDetailsAddressOne: "Lipnowska Str. 17/1",
-        contactOurDetailsAddressTwo: "PL81-504 Gdynia, Poland",
+        contactOurDetailsAddressOne: "Gdynia, Poland",
+        contactOurDetailsAddressTwo: "info@alexa-web.com",
 
         search: 'Search',
 
@@ -128,8 +128,8 @@ export const DICT = {
 
         contactOurDetailsTitle: "Nasze dane",
         contactOurDetailsName: "ALEXA-WEB",
-        contactOurDetailsAddressOne: "ul. Lipnowska 17/1",
-        contactOurDetailsAddressTwo: "81-504 Gdynia, Polska",
+        contactOurDetailsAddressOne: "Gdynia, Polska",
+        contactOurDetailsAddressTwo: "info@alexa-web.com",
 
         search: 'Szukaj',
 
