@@ -13,9 +13,9 @@ const Films = (props) => {
     const [respUrlDataFilms, isSpinnerFilms] = useGetDataUrl(API.films)
     useEffect(() => {
         if (respUrlDataFilms) {
-            const filmssWithId = respUrlDataFilms.results.map(film => ({
+            const filmssWithId = respUrlDataFilms.map(film => ({
                 ...film,
-                id: respUrlDataFilms.results.indexOf(film) + 1
+                id: respUrlDataFilms.indexOf(film) + 1
             }))
             props.setFilms(filmssWithId)
         }

@@ -13,9 +13,9 @@ const Characters = (props) => {
     const [respUrlDataCharacters, isSpinnerCharacters] = useGetDataUrl(API.characters)
     useEffect(() => {
         if (respUrlDataCharacters) {
-            const charactersWithId = respUrlDataCharacters.results.map(person => ({
+            const charactersWithId = respUrlDataCharacters.map(person => ({
                 ...person,
-                id: respUrlDataCharacters.results.indexOf(person) + 1
+                id: respUrlDataCharacters.indexOf(person) + 1
             }))
             props.setCharacters(charactersWithId)
         }

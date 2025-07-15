@@ -13,9 +13,9 @@ const Planets = (props) => {
     const [respUrlDataPlanets, isSpinnerPlanets] = useGetDataUrl(API.planets)
     useEffect(() => {
         if (respUrlDataPlanets) {
-            const planetsWithId = respUrlDataPlanets.results.map(planet => ({
+            const planetsWithId = respUrlDataPlanets.map(planet => ({
                 ...planet,
-                id: respUrlDataPlanets.results.indexOf(planet) + 1
+                id: respUrlDataPlanets.indexOf(planet) + 1
             }))
             props.setPlanets(planetsWithId)
         }

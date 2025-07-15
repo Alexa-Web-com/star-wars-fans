@@ -6,10 +6,12 @@ export const LANG = [
     { value: 'pl-PL', name: 'PL', icon: PLFlag },
 ]
 
+const apiUrl = "https://swapi.info/api"
+
 export const API = {
-    characters: 'https://swapi.dev/api/people',
-    planets: 'https://swapi.dev/api/planets',
-    films: 'https://swapi.dev/api/films',
+    characters: `${apiUrl}/people`,
+    planets: `${apiUrl}/planets`,
+    films: `${apiUrl}/films`,
 }
 
 export const DICT = {
