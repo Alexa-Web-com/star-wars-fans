@@ -6,13 +6,13 @@ const Footer = () => {
         <small className='footer'>
             <p>Copyright © 2023 </p>
 
-            <a href='https://alexa-web.com'
+            <a href='https://aleksandrawilczynska.ovh/'
                 target='_blank'
                 rel='noreferrer'
                 className='footer_link'
             >
                 <img src={logoAlexaWeb} alt='owner logo' className='footer_logo' />
-                <p>Alexa-Web.com</p>
+                <p>Alexa-Web</p>
             </a>
         </small>
 

@@ -149,7 +149,7 @@ const Contact = (props) => {
                             </div>
                             <div className='contact__details_el'>
                                 <span>www: </span>
-                                <a href='https://alexa-web.com/'>alexa-web.com</a>
+                                <a href='https://aleksandrawilczynska.ovh/'>aleksandrawilczynska.ovh</a>
                             </div>
                         </div>
                     </div>
