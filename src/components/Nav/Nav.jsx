@@ -82,11 +82,11 @@ const Nav = (props) => {
                                 props.setLang(LANG.find(item => item.name === languageEl.name).value)
                             }}>
                             <span className='nav__language_text'
-                                style={{ color: languageEl.value === props.lang && "grey" }}
+                                style={{ color: languageEl.value !== props.lang && "grey" }}
                             >{languageEl.name}</span>
                             <img src={languageEl.icon} alt={`${languageEl.name} flag`}
                                 className='nav__language_icon'
-                                style={{ opacity: languageEl.value === props.lang && "0.3" }} />
+                                style={{ opacity: languageEl.value !== props.lang && "0.3" }} />
                         </div>
                     )}
                 </div>
